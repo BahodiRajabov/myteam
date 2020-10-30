@@ -1,0 +1,486 @@
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/livvic-v5-latin-500.woff2") format("woff2"),
+  url("../fonts/livvic-v5-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: italic;
+  font-weight: 500;
+  src: local("Livvic Medium Italic"), local("Livvic-MediumItalic"),
+  url("../fonts/livvic-v5-latin-500italic.woff2") format("woff2"),
+  url("../fonts/livvic-v5-latin-500italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Livvic SemiBold"), local("Livvic-SemiBold"),
+  url("../fonts/livvic-v5-latin-600.woff2") format("woff2"),
+  url("../fonts/livvic-v5-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Livvic Bold"), local("Livvic-Bold"),
+  url("../fonts/livvic-v5-latin-700.woff2") format("woff2"),
+  url("../fonts/livvic-v5-latin-700.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Livvic", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #014E56;
+  color: #fff;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1190px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 8px 30px;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: lowercase;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
+/* Light button */
+
+.button--light {
+  border-color: #fff;
+  color: #fff;
+}
+
+.button--light:hover {
+  background-color: #fff;
+  color: #002529;
+}
+
+.button--light[disabled],
+.button--light.disabled {
+  opacity: 0.25;
+  background-color: transparent;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Dark button */
+
+.button--dark {
+  border-color: #012F34;
+  color: #012F34;
+}
+
+.button--dark:hover {
+  background-color: #012F34;
+  color: #fff;
+}
+
+.button--dark[disabled],
+.button--dark.disabled {
+  opacity: 0.25;
+  background-color: transparent;
+  color: #012F34;
+  pointer-events: none;
+}
+
+/* Secondary button */
+
+.button--secondary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #002529;
+}
+
+.button--secondary:hover {
+  border-color: #79C8C7;
+  background-color: #79C8C7;
+  color: #002529;
+}
+
+.button--secondary[disabled],
+.button--secondary.disabled {
+  opacity: 0.25;
+  background-color: #79C8C7;
+  color: #002529;
+  pointer-events: none;
+}
+
+
+/* SITE-HEADER */
+
+.site-header {
+  padding-top: 73px;
+  padding-bottom: 73px;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  margin-right: 80px;
+}
+
+.site-header__sitenav-toggler {
+  display: none;
+}
+
+
+/* LOGO */
+
+.logo {
+  /* min-width: 160px; */
+  flex-shrink: 0;
+}
+
+.logo:active {
+  opacity: 0.7;
+}
+
+/* TIL: max-width bolaga berilsa, otasi shrink bo'lmaydi */
+
+.logo__img {
+  display: block;
+  /* max-width: 160px; */
+  /* height: 40px; */
+}
+
+
+/* SITENAV */
+
+.sitenav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sitenav__item + .sitenav__item {
+  margin-left: 40px;
+}
+
+/* .sitenav__item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+.sitenav__link {
+  color: #fff;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.sitenav__link:hover {
+  color: #F67E7E;
+}
+
+.sitenav__link:active {
+  opacity: 0.7;
+}
+
+.sitenav__contact-button {
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 730px) {
+  .site-header {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .site-header__logo {
+    margin-right: 48px;
+  }
+
+  .logo__img {
+    width: 128px;
+    height: 32px;
+  }
+}
+
+/*
+@media only screen and (max-width: 700px) {
+   .site-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: #014E56;
+  }
+
+  .site-header__sitenav-toggler {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 20px;
+    height: 17px;
+    padding: 0;
+    border: none;
+    margin-left: auto;
+    background-color: transparent;
+    background-image: url("../img/icon-hamburger-menu.svg");
+  }
+
+  .site-header__sitenav-toggler::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    content: "";
+  }
+
+  .sitenav {
+    position: fixed;
+    z-index: 50;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .sitenav::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 68%;
+    height: 100%;
+    background-color: #2C6269;
+    content: "";
+  }
+
+  .sitenav__list {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sitenav__contact-button {
+    position: relative;
+    z-index: 1;
+  }
+}*/
+
+@media only screen and (max-width: 700px) {
+  .site-header {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .site-header__sitenav-toggler {
+    position: relative;
+    z-index: 55;
+    display: block;
+    width: 20px;
+    height: 17px;
+    padding: 0;
+    border: none;
+    margin-left: auto;
+    background-color: transparent;
+    background-image: url("../img/icon-hamburger-menu.svg");
+  }
+
+  .site-header--open .site-header__sitenav-toggler {
+    background-image: url("https://picsum.photos/id/870/20/17");
+  }
+
+  .site-header__sitenav-toggler::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    content: "";
+  }
+
+  .sitenav {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-top: 112px;
+    padding-right: 48px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .site-header--open .sitenav {
+    display: flex;
+  }
+
+  .sitenav::before {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #2C6269;
+    content: "";
+    transform: translateX(100%);
+  }
+
+  .site-header--open .sitenav::before {
+    animation-name: byaxke;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .sitenav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 160px;
+    margin-bottom: 36px;
+    opacity: 0;
+  }
+
+  .site-header--open .sitenav__list {
+    animation-name: tepaga-chiq;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  .sitenav__item + .sitenav__item {
+    margin-left: 0;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .sitenav__contact-button {
+    opacity: 0;
+  }
+
+  .site-header--open .sitenav__contact-button {
+    animation-name: tepaga-chiq;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1; /* infinite */
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+/*
+
+
+  .sitenav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sitenav__item + .sitenav__item {
+    margin-left: 0;
+  } */
+}
+
+@media only screen and (max-width: 450px) {
+  .sitenav::before {
+    width: 80%;
+  }
+}
+
+@keyframes byaxke {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes tepaga-chiq {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
