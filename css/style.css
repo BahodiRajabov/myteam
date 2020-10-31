@@ -379,7 +379,36 @@ img {
   border-radius: 50%;
   /* border: 2px solid #c4fffe; */
 }
+.start {
+  padding-top: 76px;
+  padding-bottom: 76px;
+
+  background-color: #f67e7e;
+  background-image: url("../img/action-bg.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% - 660px) bottom -100px;
+}
+.start__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+.start__header {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #012f34;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+}
+/* Responsive  */
+
 @media only screen and (max-width: 768px) {
+  .main {
+  }
   .container {
     padding-left: 40px;
     padding-right: 40px;
@@ -425,12 +454,12 @@ img {
   .features {
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
     background-position: right calc(50% - 390px) top;
   }
   .features__container {
     flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .features__header {
     margin-bottom: 65px;
@@ -449,6 +478,10 @@ img {
     background-image: url("../img/reviews-bg.png"),
       url("../img/reviews-bottom.png");
     background-position: left top, right bottom -100px;
+  }
+  .reviews__container {
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .reviews__header {
     font-size: 32px;
@@ -475,8 +508,30 @@ img {
   .review__user-job {
     margin-bottom: 16px;
   }
+  .start {
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background-color: #f67e7e;
+    background-image: url("../img/action-bg.png");
+    background-repeat: no-repeat;
+    background-position: left -10px bottom -120px;
+  }
+  .start__container {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .start__header {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 @media only screen and (max-width: 700px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .header {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -623,8 +678,6 @@ img {
   .features {
     padding-top: 64px;
     padding-bottom: 64px;
-    padding-left: 0;
-    padding-right: 0;
     background-position: right -100px top;
   }
   .features__container {
@@ -682,10 +735,23 @@ img {
   .review__user-job {
     margin-bottom: 16px;
   }
+  .start {
+  }
+  .start__container {
+    flex-direction: column;
+  }
+  .start__header {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
 @media only screen and (max-width: 450px) {
   .features__header {
     max-width: 240px;
     /* min-width: 100%; */
+  }
+  .start__header {
+    max-width: 327px;
   }
 }
