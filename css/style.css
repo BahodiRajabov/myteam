@@ -136,8 +136,9 @@ img {
 }
 .logo-link {
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: baseline;
 }
-
 .logo-link__img {
   display: block;
 }
@@ -356,8 +357,6 @@ img {
   margin-top: 0;
   margin-bottom: 24px;
 }
-.review__user {
-}
 .review__user-name {
   font-weight: bold;
   font-size: 18px;
@@ -404,11 +403,82 @@ img {
   margin-bottom: 0;
   margin-right: auto;
 }
+.footer {
+  background-color: #002529;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+}
+.footer__nav {
+  margin-right: 125px;
+}
+.footer__nav .logo-link {
+  margin-bottom: 25px;
+}
+.footer__center {
+  display: flex;
+  flex-direction: column;
+}
+.footer__address {
+  font-style: normal;
+  max-width: 150px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+.footer__tel {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+.phone-link {
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+}
+.footer__right {
+  margin-left: auto;
+}
+.footer__socials-list {
+  margin-top: 0;
+  margin-bottom: 51px;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer__socials-item:not(:last-child) {
+  margin-right: 16px;
+}
+.social__link {
+}
+.copy {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
 /* Responsive  */
 
 @media only screen and (max-width: 768px) {
-  .main {
-  }
   .container {
     padding-left: 40px;
     padding-right: 40px;
@@ -501,10 +571,6 @@ img {
   .review__desc {
     margin-bottom: 16px;
   }
-  .review__user {
-  }
-  .review__user-name {
-  }
   .review__user-job {
     margin-bottom: 16px;
   }
@@ -525,6 +591,9 @@ img {
   .start__header {
     font-size: 32px;
     line-height: 32px;
+  }
+  .footer {
+    display: none;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -728,14 +797,8 @@ img {
   .review__desc {
     margin-bottom: 16px;
   }
-  .review__user {
-  }
-  .review__user-name {
-  }
   .review__user-job {
     margin-bottom: 16px;
-  }
-  .start {
   }
   .start__container {
     flex-direction: column;
@@ -754,4 +817,34 @@ img {
   .start__header {
     max-width: 327px;
   }
+}
+.header {
+}
+.container {
+}
+.header__container {
+}
+.header__logo-link {
+}
+.logo-link {
+}
+.logo-link__img {
+}
+.header__nav-wrapper {
+}
+.nav {
+}
+.nav__list {
+}
+.nav__item {
+}
+.nav__link {
+}
+.nav__contact {
+}
+.btn {
+}
+.btn--light {
+}
+.toggler-btn {
 }
